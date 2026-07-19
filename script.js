@@ -1,25 +1,27 @@
-function showPage(pageId) {
-
+function showPage(id) {
     document.querySelectorAll(".page").forEach(page => {
-        page.classList.add("hidden");
+        page.classList.remove("active");
     });
 
-    document.getElementById(pageId).classList.remove("hidden");
-
+    document.getElementById(id).classList.add("active");
 }
 
 document.getElementById("openBtn").onclick = () => {
-    showPage("page2");
+    showPage("apology");
 };
 
-document.getElementById("nextBtn").onclick = () => {
-    showPage("page3");
+document.getElementById("photoBtn").onclick = () => {
+    showPage("photoPage");
 };
 
-document.getElementById("continueBtn").onclick = () => {
-    showPage("page4");
+document.getElementById("promiseBtn").onclick = () => {
+    showPage("promisePage");
 };
 
-document.getElementById("lastBtn").onclick = () => {
-    showPage("page5");
+document.getElementById("finalBtn").onclick = () => {
+    showPage("finalPage");
+};
+
+document.getElementById("restartBtn").onclick = () => {
+    showPage("intro");
 };
